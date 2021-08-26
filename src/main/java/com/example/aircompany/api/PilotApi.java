@@ -22,7 +22,6 @@ public class PilotApi {
     @GetMapping
     public Page<Pilot> getAll(@RequestParam(defaultValue = "0", required = false) int page,
                               @RequestParam(defaultValue = "15", required = false) int size) {
-
         return pilotService.get(page, size);
     }
 

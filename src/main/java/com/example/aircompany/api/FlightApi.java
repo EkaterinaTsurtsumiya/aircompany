@@ -19,7 +19,6 @@ public class FlightApi {
     @GetMapping
     public Page<Flight> getAll(@RequestParam(defaultValue = "0", required = false) int page,
                                @RequestParam(defaultValue = "15", required = false) int size) {
-
         return flightService.get(page, size);
     }
 
