@@ -52,6 +52,5 @@ public class Flight {
         this.number = number;
         this.departureTime = departureTime;
         this.destinationTime = destinationTime;
-
     }
 }

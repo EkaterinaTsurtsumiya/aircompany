@@ -22,7 +22,6 @@ public class PassengerApi {
     @GetMapping
     public Page<Passenger> getAll(@RequestParam(defaultValue = "0", required = false) int page,
                                   @RequestParam(defaultValue = "15", required = false) int size) {
-
         return passengerService.get(page, size);
     }
 
