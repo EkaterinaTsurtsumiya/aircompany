@@ -9,6 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -26,7 +27,7 @@ public class Ticket {
 
     @NotNull(message = "Цена не может быть 0")
     @Positive
-    private Integer price;
+    private BigDecimal price;
 
     @NotNull(message = "А где все пассажиры?")
     @ManyToOne
@@ -35,7 +36,7 @@ public class Ticket {
     @ManyToMany(mappedBy = "tickets")
     private List<Flight> flights;
 
-    public Ticket(String number, Integer price) {
+    public Ticket(String number, BigDecimal price) {
         this.number = number;
         this.price = price;
     }

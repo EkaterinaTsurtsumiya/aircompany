@@ -15,8 +15,7 @@ import java.util.List;
 public class TicketBookDto {
 
     @Schema(description = "Список id полетов для заказа")
-    List<Integer> flightIds;
+    List<Integer> ticketPriceIds;
     Integer passengerId;
-
 
 }

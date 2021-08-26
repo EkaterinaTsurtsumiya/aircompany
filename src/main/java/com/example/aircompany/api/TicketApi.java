@@ -46,7 +46,7 @@ public class TicketApi {
     @Operation(summary = "Метод для заказа билетов")
     @PostMapping("book")
     public Ticket book(@RequestBody TicketBookDto ticketBookDto){
-        return ticketService.book(ticketBookDto.getFlightIds(), ticketBookDto.getPassengerId());
+        return ticketService.book(ticketBookDto.getTicketPriceIds(), ticketBookDto.getPassengerId());
     }
 }
 
