@@ -20,6 +20,7 @@ public class TicketBookDto {
     @Schema(description = "Список id полетов для заказа")
     @NotEmpty
     List<Integer> ticketPriceIds;
+
     @NotNull
     @Positive
     Integer passengerId;
