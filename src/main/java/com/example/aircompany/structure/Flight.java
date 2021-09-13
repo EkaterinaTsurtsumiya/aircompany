@@ -7,6 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -41,12 +42,12 @@ public class Flight {
     private Plane plane;
 
     @ManyToMany
-    private List<Ticket> tickets;
+    private List<Ticket> tickets = new ArrayList<>();
 
     @NotNull (message = "Без пилота самолет не полетит")
     //TODO
     @ManyToMany(mappedBy = "flights")
-    private List<Pilot> pilots;
+    private List<Pilot> pilots = new ArrayList<>();
 
     public Flight(String number, LocalDateTime departureTime, LocalDateTime destinationTime) {
         this.number = number;
